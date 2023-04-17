@@ -24,6 +24,8 @@ if (Object.keys(params).length > 0) {
 function checkAuth() {
   var params = JSON.parse(localStorage.getItem("oauth2_params"));
   if (params && params["access_token"]) {
+    //redirect to dashboard
+    window.location.href = "https://esmssolutions.blogspot.com/admin-dashboard";
     console.log("user authenticated");
   } else {
     oauthSignIn();
