@@ -1,0 +1,14 @@
+google client id
+706852802807-8l7dfqbplqfj7udhp8r1mos7e3lj89d3.apps.googleusercontent.com
+Api key
+AIzaSyD_JA2P5HZ6pK0654-tFR-d6Ns-bG7fR-U
+
+https://accounts.google.com/o/oauth2/v2/auth?
+ scope=https%3A//www.googleapis.com/auth/blogger&
+ include_granted_scopes=true&
+ response_type=token&
+ state=state_parameter_passthrough_value&
+ redirect_uri=https%3A//esmssolutions.blogspot.com/admin-dashboard&
+ client_id=706852802807-8l7dfqbplqfj7udhp8r1mos7e3lj89d3.apps.googleusercontent.com
+
+ https://esmssolutions.blogspot.com/p/admin-token.html#state=pass-through%20value&access_token=ya29.a0Ael9sCMXmLU87Kq-Kf4ycPzT3sGudo7W7nnIingB-7vZd-24tHyZI-kaRTLwjbUPNXAU6uudIshi5qcvRhgVZl9WL8SWWyV1T78nH718bpIeD_7_mYP29XWUzenvnbMobo9_ZIHyfUK2Rr0dEoru9jtgGCqhaCgYKAaYSARISFQF4udJhHC-etKuLZwjT5uDg2G54NQ0163&token_type=Bearer&expires_in=3599&scope=https://www.googleapis.com/auth/blogger
