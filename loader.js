@@ -14,7 +14,6 @@ if (currentUrl.indexOf(keyword) !== -1) {
   head.appendChild(link);
   console.log("keyword not found in url");
 } else {
-  
   //load all css and javascript file of admin theam
   console.log("keyword found in url");
 }
