@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+        href="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/images/favicon.ico" />
+
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/css/bootstrap.min.css"
+        id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/css/icons.min.css"
+        rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/css/app.min.css" id="app-style"
+        rel="stylesheet" type="text/css" />
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./assets/angularjs/config.js"></script>
+
+    <script>
+        angular.module("myApp").constant("base_url", "http://127.0.0.1:5500/");
+        angular
+            .module("myApp")
+            .constant(
+                "access_token",
+                "ya29.a0Ael9sCNTKHS7mYhUjGbM2Zj439i3w7FgaFPmE9vtIpdCb9mXNQ2FCLg2skzPkif6GdOx9-qW7YLCyqap9QDA_T_3d9kITeWBDB0Se5-A_7QHJtWrG_56ekyu9lYjhB2wGmDL2BW-bNYx70kTzEHe7SkmUPlPRQaCgYKAVMSARISFQF4udJhSMZpHk3dvGUZcN4cC_Hccg0165"
+            );
+    </script>
+</head>
+
+<body data-sidebar="dark" ng-controller="postController">
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/images/logo.svg"
+                                    alt="" height="22" />
+                            </span>
+                            <span class="logo-lg">
+                                <img src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/images/logo-dark.png"
+                                    alt="" height="17" />
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/images/logo-light.svg"
+                                    alt="" height="22" />
+                            </span>
+                            <span class="logo-lg">
+                                <img src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/images/logo-light.png"
+                                    alt="" height="19" />
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="d-flex">
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                            <i class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user"
+                                src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/images/users/avatar-1.jpg"
+                                alt="Header Avatar" />
+                            <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#"><i
+                                    class="bx bx-lock-open font-size-16 align-middle me-1"></i>
+                                <span key="t-lock-screen">Lock screen</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#"><i
+                                    class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+            <div data-simplebar class="h-100">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="bx bx-home-circle"></i> Dashboards</a>
+                        </li>
+                        <li>
+                            <a href="posts.html"> <i class="bx bx-detail"></i> Posts</a>
+                        </li>
+                        <li>
+                            <a href="settings.html"> <i class="bx bx-cog"></i> Settings</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Post Create</h4>
+
+                                <div class="page-title-right">
+                                    <button ng-click="save()"  class="btn btn-primary waves-effect waves-light">
+                                        <i class="bx bx-smile font-size-16 align-middle me-2"></i>
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Post Information</h4>
+
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label for="formrow-inputState" class="form-label">Category</label>
+                                                    <select id="formrow-inputState" class="form-select">
+                                                        <option selected>Select</option>
+                                                        <option>...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="formrow-firstname-input" class="form-label">Title</label>
+                                            <input type="text" class="form-control" id="formrow-firstname-input"
+                                                ng-model="appData.title" />
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label for="formrow-email-input" class="form-label">Content</label>
+                                                    <texteditor  id="summernote" class="form-control"
+                                                        ng-model="appData.content"></texteditor>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            © Skote.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Themesbrand
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/libs/jquery/jquery.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/libs/simplebar/simplebar.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/libs/node-waves/waves.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/js/pages/dashboard.init.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rojapeiris/assets@main/admin-panel/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#summernote").summernote({
+                height: 400,
+            });
+        });
+    </script>
+    <script>
+        app.controller(
+            "postController",
+            function ($scope, $http, ACCESS_TOKEN, BASE_URL) {
+                $scope.appData = {};
+
+                $scope.save = function () {
+                    console.log("form data"+ $scope.appData.title);
+                    $scope.appData.content = $('#summernote').summernote('code');
+                    $scope.appData.labels = ["this is a test label","another label"];
+                    $scope.appData.Permalink = "http://esmssolutions.blogspot.com/post-one.html"
+                    console.log("form data"+ $scope.appData.content);
+                    $http({
+                        method: "POST",
+                        url: "https://www.googleapis.com/blogger/v3/blogs/21197127540802782/posts/",
+                        headers: {
+                            'Accept': "application/json",
+                            'Authorization': "Bearer " + ACCESS_TOKEN,
+                            'Content-Type': 'application/json',
+                        },
+                        data: $scope.appData,
+                    }).then(
+                        function success(responce) {
+                            console.log("Your data has been updated successfully.");
+                            console.log(responce);
+
+                        
+                        },
+                        function error(responce) {
+                            console.log(
+                                "An error occurred while updating the banner image."
+                            );
+                            console.log(responce);
+                          
+                        }
+                    );
+                };
+
+                $scope.initSummernote = function(){
+                    $("#summernote").summernote({
+                        height: 400,
+                    });
+                };
+            }
+        );
+    </script>
+</body>
+
+</html>
