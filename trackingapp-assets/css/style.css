@@ -1,0 +1,191 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+@font-face {
+    font-family: Malithi;
+    src: url(fonts/FM-Malithi.TTF);
+  }
+
+  @font-face {
+    font-family: Bindumathi;
+    src: url(fonts/FM\ -\ Bindumathi\ x.TTF);
+  }
+.container {
+	max-width: 1300px !important;
+	-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.35);
+    background-color: white;
+}
+body{
+    background-color: #f9f9f9;
+}
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .display-4 {
+      font-size: 3rem;
+    }
+  }
+  
+  
+  
+  .card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
+  
+  /*
+   * Blog posts
+   */
+  .blog-post {
+    margin-bottom: 4rem;
+  }
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 60px;
+    font-weight: 800;
+    font-family: "Malithi";
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+
+  .eng{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /*
+   * Footer
+   */
+  .blog-footer {
+    padding: 2.5rem 0;
+    color:white;
+    text-align: center;
+    background-color: #0a6fb7;
+    border-top: .05rem solid #3ebbef;
+  }
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .nav{
+      background-color:#0a6fb7;
+      margin: 0;
+      padding: 0;
+  }
+  .nav a{
+      color: white;
+      padding:0;
+      margin: 0;
+      height: 100%;
+      float: left;
+      font-size: 14px;
+  }
+  .nav a:hover{
+      text-decoration: none;
+      background-color: #3ebbef;
+  }
+  .left-side-bar-header{
+    background-color:#0a6fb7;
+    color: white;
+    text-align: center;
+    font-family: 'Malithi';
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .news-side{
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom-width:1px;
+    border-bottom-style:dotted;
+    border-bottom-color:#ccc;
+    position: relative;
+    float: left;
+  }
+  .news-side-text{
+    font-size: 13px;
+    line-height:17px
+  }
+  .news-side a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+  }
+  .blog-post {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom-width:1px;
+    border-bottom-style:dotted;
+    border-bottom-color:#ccc;
+    position: relative;
+    float: left;
+  }
+  .blog-content{
+    font-family: 'Malithi';
+  }
+  .read-more{
+    font-family: 'Malithi';
+    font-weight: 500;
+    background-color: #0a6fb7;
+    color: white;
+    border: none;
+  }
+  .read-more a{
+    text-decoration: none;
+    color: white;
+  }
+  .read-more:hover{
+  background-color: #3ebbef;  
+  }
+  .comment-header{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .btn-comment{
+    background-color: #0a6fb7;
+    border-radius: 20px;
+    border: none;
+  }
+  .btn-comment:hover{
+    background-color: #3ebbef;
+  }
+  
